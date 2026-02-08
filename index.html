@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بوابة المختبر التقنية</title>
+    <!-- Tailwind CSS for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: IBM Plex Sans Arabic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        body {
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .gradient-bg {
+            background: radial-gradient(circle at top, #1a1a1a 0%, #0a0a0a 100%);
+            min-height: 100vh;
+        }
+
+        /* مخصص لتأثيرات البطاقة */
+        .action-card {
+            background: rgba(24, 24, 27, 0.4);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(39, 39, 42, 1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .action-card:hover {
+            background: rgba(39, 39, 42, 0.6);
+            border-color: rgba(245, 158, 11, 0.5);
+            box-shadow: 0 0 30px rgba(245, 158, 11, 0.05);
+        }
+
+        .icon-container {
+            background: rgba(39, 39, 42, 0.8);
+            transition: transform 0.3s ease;
+        }
+
+        .action-card:hover .icon-container {
+            transform: scale(1.1);
+        }
+
+        /* زر "انتقل" الحركي */
+        .transition-btn {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .action-card:hover .transition-btn {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div class="gradient-bg flex flex-col items-center px-4 py-12 md:py-20">
+        <div class="w-full max-w-4xl space-y-12">
+            
+            <!-- Header Section -->
+            <header class="flex flex-col items-center text-center space-y-4">
+                <div class="flex items-center gap-3">
+                    <div class="p-2 border border-amber-500 rounded-lg">
+                        <i data-lucide="monitor" class="w-6 h-6 text-amber-500"></i>
+                    </div>
+                    <span class="text-gray-300 text-sm md:text-base font-medium">
+                        قسم تقنيات شبكات وبرمجيات الحاسوب
+                    </span>
+                </div>
+                
+                <h1 class="text-5xl md:text-6xl font-bold text-amber-500 mt-4 tracking-tight">
+                    مختبر 4
+                </h1>
+                
+                <p class="text-gray-400 text-lg md:text-xl font-light">
+                    حاسبة رقم 9
+                </p>
+            </header>
+
+            <!-- Action Cards Section -->
+            <main class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                
+                <!-- Card 1 -->
+                <div class="relative group">
+                    <a href="https://drive.google.com/file/d/1rImkYtccyC6Ya9RtcUOLIxDQ8QnAks0r/view?usp=drive_link" class="action-card flex flex-col items-center justify-center p-12 md:p-16 rounded-3xl cursor-pointer w-full text-center block">
+                        <div class="icon-container p-5 rounded-2xl mb-8">
+                            <i data-lucide="file-text" class="w-10 h-10 text-amber-500"></i>
+                        </div>
+                        <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">
+                            لائحة تعريفية
+                        </h2>
+                        <p class="text-gray-500 text-base md:text-lg mb-8 font-light">
+                            اضغط للانتقال
+                        </p>
+                        <div class="transition-btn flex items-center gap-2 text-amber-500 font-medium group-hover:gap-3">
+                            <span>انتقل</span>
+                            <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="relative group">
+                    <a href="https://drive.google.com/file/d/1PbDPcBzRe_VYJIlWmHGz8ekpiNP7ely8/view?usp=drive_link " class="action-card flex flex-col items-center justify-center p-12 md:p-16 rounded-3xl cursor-pointer w-full text-center block">
+                        <div class="icon-container p-5 rounded-2xl mb-8">
+                            <i data-lucide="clipboard-list" class="w-10 h-10 text-amber-500"></i>
+                        </div>
+                        <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">
+                            لائحة تنظيمية
+                        </h2>
+                        <p class="text-gray-500 text-base md:text-lg mb-8 font-light">
+                            اضغط للانتقال
+                        </p>
+                        <div class="transition-btn flex items-center gap-2 text-amber-500 font-medium group-hover:gap-3">
+                            <span>انتقل</span>
+                            <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                        </div>
+                    </a>
+                </div>
+
+            </main>
+
+            <!-- Footer -->
+            <footer class="mt-20 text-center">
+                <p class="text-gray-600 text-sm">©أ.علي عبدالحمزه جاسم</p>
+            </footer>
+
+        </div>
+    </div>
+
+    <script>
+        // تشغيل الأيقونات
+        lucide.createIcons();
+    </script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
